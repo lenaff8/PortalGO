@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33229338547568062}
   - component: {fileID: 136182857917011336}
   - component: {fileID: 23624616157257666}
-  - component: {fileID: 114251782595318820}
+  - component: {fileID: 114486668416373600}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -84,7 +84,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1455432090271174}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114251782595318820
+--- !u!114 &114486668416373600
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -92,14 +92,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1455432090271174}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8f927d3db19c304a899d77edcf4f12d, type: 3}
+  m_Script: {fileID: 11500000, guid: 6542768c242abaa4b84c67181a0c1acf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  playerTurn: 0
-  noPortal: 0
-  playerPosition: {x: 0, y: 0}
-  bait: {fileID: 0}
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 256
+  layerMaskCollider:
+    serializedVersion: 2
+    m_Bits: 2048
+  layerMaskTarget:
+    serializedVersion: 2
+    m_Bits: 0
+  speed: 10
 --- !u!136 &136182857917011336
 CapsuleCollider:
   m_ObjectHideFlags: 1
