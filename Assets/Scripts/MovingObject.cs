@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class MovingObject : MonoBehaviour {
 
-    public LayerMask layerMaskPortal, layerMaskTile, layerMaskTarget;
+    public LayerMask layerMaskPortal, layerMaskCollider, layerMaskTarget;
     public float speed;
 
     private GameObject bait;
@@ -91,7 +91,7 @@ public abstract class MovingObject : MonoBehaviour {
 
             }
         }
-        else if (Physics.Raycast(start, transform.TransformDirection(new Vector3(xDir, 0, yDir)), out hit, 5.0f, layerMaskTile))
+        else if (Physics.Raycast(start, transform.TransformDirection(new Vector3(xDir, 0, yDir)), out hit, 5.0f, layerMaskCollider))
         {
             if (hit.collider != null)
             {
