@@ -22,6 +22,11 @@ public class FloorTile : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (!GameManager.instance.playersTurn)
+        {
+            outline.enabled = false;
+            return;
+        }
 
         RaycastHit hit;
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, Mathf.Infinity, layerMask))

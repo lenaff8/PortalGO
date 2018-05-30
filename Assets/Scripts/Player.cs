@@ -29,7 +29,7 @@ public class Player : MovingObject {
         {
             if (Move(vertical * 5, horizontal * -5))
             {
-                GameManager.instance.Ss();
+                GameManager.instance.playersTurn = false;
             }
         }
         

@@ -5,12 +5,12 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
 
     public static GameManager instance = null;
-    public bool playersTurn;//, enemiesMoving;
-    //public float turnDelay = 1.1f;
+    public bool playersTurn, enemiesMoving;
+    private float turnDelay = 0.5f;
 
     private Vector3 orangePortalBegin, orangePortalEnd;
     private Vector3 bluePortalBegin, bluePortalEnd;
-    //private List<Enemy> enemies;
+    private List<Enemy> enemies;
     private Vector3 nullVector = new Vector3(-1, -1, -1);
     // Use this for initialization
     void Awake () {
@@ -25,32 +25,27 @@ public class GameManager : MonoBehaviour {
         bluePortalBegin = nullVector;
         bluePortalEnd = nullVector;
 
+        
         playersTurn = false;
-        Invoke("SetPlayersTurn", 1);
-       /* enemiesMoving = false;
-        enemies = new List<Enemy>();*/
+        enemiesMoving = true;
+        Invoke("PlayerTurn", 2);
+        enemies = new List<Enemy>();
     }
 	
 	// Update is called once per frame
 	void Update () {
-        /*if (playersTurn || enemiesMoving)
+        if (playersTurn || enemiesMoving)
             return;
 
-        StartCoroutine(MoveEnemies());*/
-    }
-
-    public void Ss ()
-    {
-        playersTurn = false;
-        Invoke("SetPlayersTurn", 1);
+        StartCoroutine(MoveEnemies());
     }
 
     public void AddEnemyToList(Enemy script)
     {
-        //enemies.Add(script);
+        enemies.Add(script);
     }
 
-    /*IEnumerator MoveEnemies()
+    IEnumerator MoveEnemies()
     {
         enemiesMoving = true;
 
@@ -64,18 +59,16 @@ public class GameManager : MonoBehaviour {
         for (int i = 0; i < enemies.Count; i++)
         {
             enemies[i].MoveEnemy();
-            yield return new WaitForSeconds(enemies[i].moveTime);
+            yield return new WaitForSeconds(turnDelay);
         }
-        Invoke("PlayerTurn",1);
-        //playersTurn = true;
-        //enemiesMoving = false;
+        Invoke("PlayerTurn",0.1f);
     }
 
     private void PlayerTurn()
     {
         playersTurn = true;
         enemiesMoving = false;
-    }*/
+    }
 
     private void SetPlayersTurn()
     {
