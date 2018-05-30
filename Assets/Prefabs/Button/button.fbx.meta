@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 93297caf94a43354a91aed2d546561f6
-timeCreated: 1527623112
+guid: 5ecc36c0f60f56648b14e1f5b45baf3c
+timeCreated: 1527705575
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -18,7 +18,12 @@ ModelImporter:
     3300002: Center
     4300000: Center
     4300002: Base
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 5a437353a2814c643bf963864d35bf52, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
@@ -69,8 +74,8 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 60
-    normalImportMode: 0
+    normalSmoothAngle: 40
+    normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
   importAnimation: 1
