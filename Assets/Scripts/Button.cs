@@ -5,7 +5,7 @@ using UnityEngine;
 public class Button : MonoBehaviour
 {
     Animator anim;
-    public  Animator otherObject;
+    public Mechanism[] links;
     // Use this for initialization
     void Start()
     {
@@ -20,12 +20,18 @@ public class Button : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         anim.SetTrigger("Active");
-        otherObject.SetTrigger("Activate");
+        for (int i = 0; i < links.Length; i++)
+        {
+            links[i].SetState("Activate");
+        }
     }
     void OnTriggerExit(Collider other)
-    {
+    { 
         anim.SetTrigger("Deactive");
-        otherObject.SetTrigger("Deactivate");
+        for (int i = 0; i < links.Length; i++)
+        {
+            links[i].SetState("Deactivate");
+        }
     }
 
 }

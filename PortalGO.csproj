@@ -297,10 +297,13 @@
     <Compile Include="Assets\Imported Assets\_MK\MKGlowFree\MKGlowFree.cs" />
     <Compile Include="Assets\Imported Assets\QuickOutline\Scripts\Outline.cs" />
     <Compile Include="Assets\Scripts\Button.cs" />
+    <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\FloorTile.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Mechanism.cs" />
     <Compile Include="Assets\Scripts\MovingObject.cs" />
+    <Compile Include="Assets\Scripts\Piston.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Turret.cs" />
   </ItemGroup>
