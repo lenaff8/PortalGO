@@ -112,7 +112,7 @@ public abstract class MovingObject : MonoBehaviour {
         return false;
     }
 
-    protected IEnumerator SmoothMovement(Vector3 end)
+    public IEnumerator SmoothMovement(Vector3 end)
     {
         float step = speed * Time.deltaTime;
         float sqrRemainingDistance = (transform.position - end).sqrMagnitude;
