@@ -5,10 +5,10 @@ using UnityEngine;
 public class Player : MovingObject {
 
     private bool pt;
-
-	// Use this for initialization
-	protected override void Start () {
-        
+    //private Animator animator;
+    // Use this for initialization
+    protected override void Start () {
+        //animator = GetComponent<Animator>();
     }
 	
 	// Update is called once per frame
@@ -27,7 +27,7 @@ public class Player : MovingObject {
 
         if (horizontal != 0 || vertical != 0)
         {
-            if (Move(vertical * 5, horizontal * -5))
+            if (Move(transform.position.x + vertical * 5, transform.position.z + horizontal * -5))
             {
                 GameManager.instance.playersTurn = false;
             }
@@ -35,6 +35,5 @@ public class Player : MovingObject {
         
     }
 
-    
-
+ 
 }

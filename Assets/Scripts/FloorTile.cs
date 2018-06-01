@@ -29,6 +29,14 @@ public class FloorTile : MonoBehaviour {
         }
 
         RaycastHit hit;
+
+        /*if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), out hit, 4.0f))
+        {
+            if (hit.collider != null)
+                return;
+        }*/
+
+
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, Mathf.Infinity, layerMask))
         {
             if (gameObject == hit.transform.gameObject)
@@ -63,13 +71,13 @@ public class FloorTile : MonoBehaviour {
 
                         }                           // [OPCIONAL] Sonido de no poder poner portal
                     }
-                    else
-                        if (bluePortalB)
-                        {
-                            Destroy(beginPortal);
-                            Destroy(portal);
-                            bluePortalB = false;
-                        }
+                    else if (bluePortalB)
+                    {
+                        Destroy(beginPortal);
+                        Destroy(portal);
+                        GameManager.instance.SetBluePortal(new Vector3(-1,-1,-1));
+                        bluePortalB = false;
+                    }
                 }
             }
             else
@@ -102,13 +110,13 @@ public class FloorTile : MonoBehaviour {
                             }
                         }                           // [OPCIONAL] Sonido de no poder poner portal
                     }
-                    else
-                        if (orangePortalB)
-                        {
-                            Destroy(beginPortal);
-                            Destroy(portal);
-                            orangePortalB = false;
-                        }
+                    else if (orangePortalB)
+                    {
+                        Destroy(beginPortal);
+                        Destroy(portal);
+                        GameManager.instance.SetOrangePortal(new Vector3(-1,-1,-1));
+                        orangePortalB = false;
+                    }
                 }
             }
             else
