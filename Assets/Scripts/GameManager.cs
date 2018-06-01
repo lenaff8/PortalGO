@@ -5,13 +5,14 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
 
     public static GameManager instance = null;
-    public bool playersTurn, enemiesMoving;
-    private float turnDelay = 0.5f;
+    public bool playersTurn, enemiesMoving, portalUsed;
 
+    private float turnDelay = 1.1f;
     private Vector3 orangePortalBegin, orangePortalEnd;
     private Vector3 bluePortalBegin, bluePortalEnd;
     private List<Enemy> enemies;
     private Vector3 nullVector = new Vector3(-1, -1, -1);
+    
     // Use this for initialization
     void Awake () {
 
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour {
 
         
         playersTurn = false;
+        portalUsed = false;
         enemiesMoving = true;
         Invoke("PlayerTurn", 2);
         enemies = new List<Enemy>();
@@ -60,8 +62,21 @@ public class GameManager : MonoBehaviour {
         {
             enemies[i].MoveEnemy();
             yield return new WaitForSeconds(turnDelay);
+            if (portalUsed)
+            {
+                orangePortalBegin = nullVector;
+                orangePortalEnd = nullVector;
+                bluePortalBegin = nullVector;
+                bluePortalEnd = nullVector;
+
+                Destroy(GameObject.Find("BluePortal"));
+                Destroy(GameObject.Find("BluePortalBegin"));
+                Destroy(GameObject.Find("OrangePortal"));
+                Destroy(GameObject.Find("OrangePortalBegin"));
+            }
+                
         }
-        Invoke("PlayerTurn",0.1f);
+        Invoke("PlayerTurn",0.3f);
     }
 
     private void PlayerTurn()
@@ -97,6 +112,12 @@ public class GameManager : MonoBehaviour {
 
     public void SetOrangePortal(Vector3 portal)
     {
+        if (portal == nullVector)
+        {
+            orangePortalBegin = portal;
+            orangePortalEnd = portal;
+            return;
+        }
         if (portal.z % 5 != 0)              // Portal vertical
         {
             orangePortalBegin = new Vector3(portal.x,portal.y,portal.z - 2.5f);
@@ -114,8 +135,16 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+
+
     public void SetBluePortal(Vector3 portal)
     {
+        if (portal == nullVector)
+        {
+            bluePortalBegin = portal;
+            bluePortalEnd = portal;
+            return;
+        }
         if (portal.z % 5 != 0)              // Portal vertical
         {
             bluePortalBegin = new Vector3(portal.x, portal.y, portal.z - 2.5f);
