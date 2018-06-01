@@ -1980,10 +1980,10 @@ MonoBehaviour:
     m_Bits: 2048
   layerMaskTarget:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 0
   layerMaskObject:
     serializedVersion: 2
-    m_Bits: 8192
+    m_Bits: 0
   speed: 8
 --- !u!137 &137349808944452536
 SkinnedMeshRenderer:
