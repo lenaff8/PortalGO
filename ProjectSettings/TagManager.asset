@@ -7,6 +7,7 @@ TagManager:
   - PortalCamera
   - OrangePortal
   - BluePortal
+  - LaserReciever
   layers:
   - Default
   - TransparentFX

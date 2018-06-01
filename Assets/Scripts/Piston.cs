@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Piston : Mechanism {
-    public GameObject tile;
-    Collider tileCollider;
-    public LayerMask layerMaskCollider, layerMaskTarget;
-
+    public GameObject tileBase, tileTop;
+    public LayerMask layerMaskObjects;
+    Collider tileBaseCollider, tileTopCollider;
+    GameObject target = null;
+    Transform targetParent = null;
 
     // Use this for initialization
     override protected void Start () {
+        tileBaseCollider = tileBase.GetComponent<Collider>();
+        tileTopCollider = tileTop.GetComponent<Collider>();
         base.Start();
-        tileCollider = tile.GetComponent<Collider>();
     }
 
     // Update is called once per frame
@@ -19,30 +21,36 @@ public class Piston : Mechanism {
 
     }
 
-    protected bool Move()
-    {
-        Vector3 start = transform.position;
-        Vector3 dir = new Vector3(0, 5, 0);
-        Vector3 end = start + dir;
-
-        RaycastHit hit;
-        if (Physics.Raycast(start, transform.TransformDirection(dir), out hit, 5.0f, layerMaskTarget))
-        {
-            if (hit.collider != null)
-            {
-                GameObject target = hit.transform.gameObject;
-                Vector3 position = hit.transform.position;
-                target.SendMessage("SmoothMovement", position + new Vector3(0,5,0));
-            }
-        }
-
-        return false;
-    }
-
     override protected void OnSetState(string state)
     {
         m_Animator.SetTrigger(state);
-        tileCollider.enabled = !tileCollider.enabled;
-        Move();
+        tileBaseCollider.enabled = !tileBaseCollider.enabled;
+        tileTopCollider.enabled = !tileTopCollider.enabled;
+
+        //Bands position
+
+        Vector3 start = gameObject.transform.GetChild(2).transform.position;
+        Vector3 dir = new Vector3(0, 3, 0);
+        Vector3 end = start + dir;
+        Debug.DrawRay(start, dir, Color.cyan);
+        RaycastHit hit;
+
+        if (Physics.Raycast(start - new Vector3(0, 2f, 0), transform.TransformDirection(dir), out hit, 10f, layerMaskObjects))
+        {
+            if (hit.collider != null)
+            {
+                target = hit.transform.gameObject;
+                Vector3 position = hit.transform.position;
+                targetParent = target.transform.parent;
+                target.transform.parent = gameObject.transform.GetChild(2).transform;
+
+                Invoke("DestroyParent", 1f);
+            }
+        }
+    }
+
+    private void DestroyParent()
+    {
+        target.transform.parent = targetParent;
     }
 }
