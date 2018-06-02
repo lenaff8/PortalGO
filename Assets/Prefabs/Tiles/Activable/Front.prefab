@@ -118,6 +118,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114505936536779490
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -130,5 +136,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08

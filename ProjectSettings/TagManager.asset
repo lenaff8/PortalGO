@@ -8,6 +8,7 @@ TagManager:
   - OrangePortal
   - BluePortal
   - LaserReciever
+  - Tile
   layers:
   - Default
   - TransparentFX
@@ -21,10 +22,10 @@ TagManager:
   - Player
   - Tile
   - Collider
-  - InvisibleWall
-  - 
-  - 
-  - 
+  - Enemy
+  - Object
+  - PickUp
+  - Invisible
   - 
   - 
   - 

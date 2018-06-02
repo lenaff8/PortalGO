@@ -31,7 +31,6 @@ public class Piston : Mechanism {
 
         Vector3 start = gameObject.transform.GetChild(2).transform.position;
         Vector3 dir = new Vector3(0, 3, 0);
-        Vector3 end = start + dir;
         Debug.DrawRay(start, dir, Color.cyan);
         RaycastHit hit;
 

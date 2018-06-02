@@ -437,7 +437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114118428095002046
 MonoBehaviour:
@@ -451,7 +451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114532091017589258
 MonoBehaviour:
@@ -465,7 +465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114893702001207402
 MonoBehaviour:
@@ -479,5 +479,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08

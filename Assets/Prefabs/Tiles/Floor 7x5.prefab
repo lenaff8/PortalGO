@@ -3735,6 +3735,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114051289937380330
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3747,7 +3753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114071046207691996
 MonoBehaviour:
@@ -3770,6 +3776,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114076112495290144
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3782,7 +3794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114089850615163952
 MonoBehaviour:
@@ -3796,7 +3808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114094605353192370
 MonoBehaviour:
@@ -3819,6 +3831,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114102164062394682
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3840,6 +3858,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114128607416787892
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3861,6 +3885,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114173877098052006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3873,7 +3903,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114176225862247892
 MonoBehaviour:
@@ -3887,7 +3917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114208733166509382
 MonoBehaviour:
@@ -3901,7 +3931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114230923661487824
 MonoBehaviour:
@@ -3915,7 +3945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114281004798576260
 MonoBehaviour:
@@ -3929,7 +3959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114289074004838398
 MonoBehaviour:
@@ -3943,7 +3973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114302171309103366
 MonoBehaviour:
@@ -3966,6 +3996,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114316562762391886
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3978,7 +4014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114317378982588494
 MonoBehaviour:
@@ -3992,7 +4028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114325200443578954
 MonoBehaviour:
@@ -4015,6 +4051,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114330564451606734
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4027,7 +4069,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114337123453302068
 MonoBehaviour:
@@ -4050,6 +4092,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114355843572012886
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4062,7 +4110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114369623709212386
 MonoBehaviour:
@@ -4076,7 +4124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114374358559496494
 MonoBehaviour:
@@ -4099,6 +4147,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114391110482377114
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4120,6 +4174,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114392253803776848
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4132,7 +4192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114397175906869594
 MonoBehaviour:
@@ -4146,7 +4206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114414358257491716
 MonoBehaviour:
@@ -4169,6 +4229,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114439543780485818
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4181,7 +4247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114441707619494916
 MonoBehaviour:
@@ -4195,7 +4261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114463307892036558
 MonoBehaviour:
@@ -4218,6 +4284,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114466301285479248
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4230,7 +4302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114472921296032846
 MonoBehaviour:
@@ -4244,7 +4316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114480013543197562
 MonoBehaviour:
@@ -4258,7 +4330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114485031043426678
 MonoBehaviour:
@@ -4281,6 +4353,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114512393393941202
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4293,7 +4371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114513453935690532
 MonoBehaviour:
@@ -4307,7 +4385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114546368203801820
 MonoBehaviour:
@@ -4330,6 +4408,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114578166120196626
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4351,6 +4435,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114605924662582716
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4372,6 +4462,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114608573603505940
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4384,7 +4480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114614457778991886
 MonoBehaviour:
@@ -4398,7 +4494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114631288117395776
 MonoBehaviour:
@@ -4412,7 +4508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114637152597687748
 MonoBehaviour:
@@ -4426,7 +4522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114648354279366292
 MonoBehaviour:
@@ -4449,6 +4545,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114683386371151480
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4470,6 +4572,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114696083400993042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4491,6 +4599,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114715675840603454
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4512,6 +4626,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114718481864397600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4524,7 +4644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114747404090254522
 MonoBehaviour:
@@ -4538,7 +4658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114756194055916528
 MonoBehaviour:
@@ -4552,7 +4672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114760614038098622
 MonoBehaviour:
@@ -4575,6 +4695,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114767189344291334
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4596,6 +4722,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114768655448246758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4617,6 +4749,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114780948324271764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4638,6 +4776,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114788184855074510
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4659,6 +4803,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114791161557916836
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4680,6 +4830,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114865942935437318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4701,6 +4857,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114873745643831676
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4722,6 +4884,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114881994079918780
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4743,6 +4911,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114882133591041524
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4755,7 +4929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114888397952937358
 MonoBehaviour:
@@ -4778,6 +4952,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114890061351143726
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4790,7 +4970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114904427044048976
 MonoBehaviour:
@@ -4813,6 +4993,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114921378106701070
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4825,7 +5011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114937842751045576
 MonoBehaviour:
@@ -4848,6 +5034,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114946472805646278
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4869,6 +5061,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114954023390568176
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4890,6 +5088,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114973701701515208
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4902,7 +5106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114982715297583236
 MonoBehaviour:
@@ -4916,7 +5120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.9705882, g: 0.47102076, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 9.08
 --- !u!114 &114983501134049206
 MonoBehaviour:
@@ -4939,3 +5143,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMaskNotPortal:
+    serializedVersion: 2
+    m_Bits: 0
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 0

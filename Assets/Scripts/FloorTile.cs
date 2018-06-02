@@ -52,7 +52,7 @@ public class FloorTile : MonoBehaviour {
 
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, Mathf.Infinity, layerMask))
         {
-            if (gameObject == hit.transform.gameObject)
+            if (gameObject.tag == "Tile" && gameObject == hit.transform.gameObject)
                 outline.enabled = true;
             else 
                 outline.enabled = false;
