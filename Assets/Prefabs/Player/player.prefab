@@ -1434,7 +1434,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1858886599490022}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.1717777, y: 9.49645, z: 16.606966}
+  m_LocalPosition: {x: 0, y: -0.01, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 4645983368640790}
@@ -1980,10 +1980,10 @@ MonoBehaviour:
     m_Bits: 2048
   layerMaskTarget:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4096
   layerMaskObject:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8192
   speed: 8
 --- !u!137 &137349808944452536
 SkinnedMeshRenderer:
