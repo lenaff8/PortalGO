@@ -8,8 +8,8 @@ public class GameManager : MonoBehaviour {
     public bool playersTurn, enemiesMoving, portalUsed;
 
     private float turnDelay = 1.1f;
-    private Vector3 orangePortalBegin, orangePortalEnd;
-    private Vector3 bluePortalBegin, bluePortalEnd;
+    private Vector3 orangePortalBegin, orangePortalEnd, orangePortalPos;
+    private Vector3 bluePortalBegin, bluePortalEnd, bluePortalPos;
     private List<Enemy> enemies;
     private Vector3 nullVector = new Vector3(-1, -1, -1);
     
@@ -90,6 +90,11 @@ public class GameManager : MonoBehaviour {
         playersTurn = true;
     }
 
+    public Vector3 GetOrangePortalPos()
+    {
+        return orangePortalPos;
+    }
+
     public Vector3 GetOrangePortalBegin()
     {
         return orangePortalBegin;
@@ -98,6 +103,11 @@ public class GameManager : MonoBehaviour {
     public Vector3 GetOrangePortalEnd()
     {
         return orangePortalEnd;
+    }
+
+    public Vector3 GetBluePortalPos()
+    {
+        return bluePortalPos;
     }
 
     public Vector3 GetBluePortalBegin()
@@ -110,7 +120,12 @@ public class GameManager : MonoBehaviour {
         return bluePortalEnd;
     }
 
-    public void SetOrangePortal(Vector3 portal)
+    public void SetOrangePortalPos(Vector3 portalPos)
+    {
+        orangePortalPos = portalPos;
+    }
+
+        public void SetOrangePortal(Vector3 portal)
     {
         if (portal == nullVector)
         {
@@ -136,6 +151,10 @@ public class GameManager : MonoBehaviour {
     }
 
 
+    public void SetBluePortalPos(Vector3 portalPos)
+    {
+        bluePortalPos = portalPos;
+    }
 
     public void SetBluePortal(Vector3 portal)
     {
