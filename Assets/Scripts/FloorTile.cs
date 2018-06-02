@@ -6,7 +6,7 @@ public class FloorTile : MonoBehaviour {
 
     //public ParticleSystem orangePortal, bluePortal;
     public GameObject bluePortal, orangePortal, bluePortalBegin, orangePortalBegin;
-    public LayerMask layerMask;
+    public LayerMask layerMask, layerMaskNotPortal;
 
     private GameObject portal, beginPortal;
     private Outline outline;
@@ -30,11 +30,11 @@ public class FloorTile : MonoBehaviour {
 
         RaycastHit hit;
 
-        /*if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), out hit, 4.0f))
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), out hit, 4.0f, layerMaskNotPortal))
         {
             if (hit.collider != null)
                 return;
-        }*/
+        }
 
 
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, Mathf.Infinity, layerMask))
@@ -79,6 +79,7 @@ public class FloorTile : MonoBehaviour {
                         bluePortalB = false;
                     }
                 }
+
             }
             else
                 if (mouseDownL)
@@ -118,6 +119,7 @@ public class FloorTile : MonoBehaviour {
                         orangePortalB = false;
                     }
                 }
+
             }
             else
                 if (mouseDownR)
