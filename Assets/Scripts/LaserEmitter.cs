@@ -36,7 +36,7 @@ public class LaserEmitter : MonoBehaviour
     void Update()
     {
         laserLineRenderer.SetPositions(initLaserPositions);
-        secondLineRenderer.SetPositions(initLaserPositions);
+        //secondLineRenderer.SetPositions(initLaserPositions);
 
         ShootLaserFromTargetPosition(transform.position, LaserDirection);
     }
@@ -44,39 +44,47 @@ public class LaserEmitter : MonoBehaviour
 
     void ShootLaserFromTargetPosition(Vector3 position, Vector3 direction)
     {
-        Ray ray = new Ray(position, direction);
+        Ray ray = new Ray(position+direction*2, direction);
         RaycastHit raycastHit;
         Vector3 endPosition = position + (laserMaxLength * direction);
 
         if (Physics.Raycast(ray, out raycastHit, laserMaxLength, layerMaskObjects))
         {
-            
+
             if (raycastHit.collider.gameObject.tag == "OrangePortal")
             {
+                Debug.Log("Hitting orange");
+
                 Vector3 nullVector = new Vector3(-1, -1, -1);
-                if (GameManager.instance.GetOrangePortalEnd() != nullVector)
-                {
-                    Vector3 beginPos = GameManager.instance.GetBluePortalEnd();
-                    Vector3 towardPos = GameManager.instance.GetBluePortalBegin();
-                    Vector3 dir = towardPos - beginPos;
-                    beginPos = beginPos + (dir / 2) - new Vector3(0, 1, 0); ; //dir is of the form (0,5,0) (i think)
-                    ShootSecondaryLaserFromTargetPosition(beginPos, dir);
-                }
+                Debug.Log("Blue at " + GameManager.instance.GetBluePortalEnd());
+                Vector3 beginPos = GameManager.instance.GetBluePortalEnd();
+                Vector3 towardPos = GameManager.instance.GetBluePortalBegin();
+                Vector3 dir = towardPos - beginPos;
+                beginPos = beginPos + (dir / 2) - new Vector3(0, 1, 0); ; //dir is of the form (0,5,0) (i think)
+                ShootSecondaryLaserFromTargetPosition(beginPos, dir);
+                Vector3 endPos = GameManager.instance.GetOrangePortalEnd();
+                Vector3 fromPos = GameManager.instance.GetOrangePortalBegin();
+                endPosition = raycastHit.point + (endPos - fromPos);
             }
             else if (raycastHit.collider.gameObject.tag == "BluePortal")
             {
+                Debug.Log("Hitting blue");
                 Vector3 nullVector = new Vector3(-1, -1, -1);
-                if (GameManager.instance.GetOrangePortalEnd() != nullVector)
-                {
-                    Vector3 beginPos = GameManager.instance.GetOrangePortalEnd();
-                    Vector3 towardPos = GameManager.instance.GetOrangePortalBegin();
-                    Vector3 dir = towardPos - beginPos;
-                    beginPos = beginPos + (dir / 2) - new Vector3(0,1,0);
-                    ShootSecondaryLaserFromTargetPosition(beginPos, dir);
-                }
+                Debug.Log("Orange at " + GameManager.instance.GetOrangePortalEnd());
+                Vector3 beginPos = GameManager.instance.GetOrangePortalEnd();
+                Vector3 towardPos = GameManager.instance.GetOrangePortalBegin();
+                Vector3 dir = towardPos - beginPos;
+                beginPos = beginPos + (dir / 2) - new Vector3(0, 1, 0);
+                ShootSecondaryLaserFromTargetPosition(beginPos, dir);
+                Vector3 endPos = GameManager.instance.GetBluePortalEnd();
+                Vector3 fromPos = GameManager.instance.GetBluePortalBegin();
+                endPosition = raycastHit.point + (endPos - fromPos);
             }
-            else checkForObjectCollision(raycastHit);
-            endPosition = raycastHit.point;
+            else
+            {
+                checkForObjectCollision(raycastHit);
+                endPosition = raycastHit.point;
+            }
 
         }
 
@@ -87,8 +95,9 @@ public class LaserEmitter : MonoBehaviour
 
     void ShootSecondaryLaserFromTargetPosition(Vector3 position, Vector3 direction)
     {
+        Debug.Log("Shoot second ray from " + position);
         secondLineRenderer.SetPosition(0, position);
-        Ray ray = new Ray(position, direction);
+        Ray ray = new Ray(position + direction * 2, direction);
         RaycastHit raycastHit;
         Vector3 endPosition = position + (laserMaxLength * direction);
         //bool orangePortal = false;
