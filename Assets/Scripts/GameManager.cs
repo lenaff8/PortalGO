@@ -7,9 +7,11 @@ public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
     public bool playersTurn, enemiesMoving, portalUsed;
 
-    private float turnDelay = 1.1f;
-    public Vector3 orangePortalBegin, orangePortalEnd, orangePortalPos;
-    public Vector3 bluePortalBegin, bluePortalEnd, bluePortalPos;
+
+    private float turnDelay = 0.5f;
+    private Vector3 orangePortalBegin, orangePortalEnd, orangePortalPos;
+    private Vector3 bluePortalBegin, bluePortalEnd, bluePortalPos;
+
     private List<Enemy> enemies;
     private Vector3 nullVector = new Vector3(-1, -1, -1);
     
