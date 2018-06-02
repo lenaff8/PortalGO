@@ -7,7 +7,7 @@ public class Piston : Mechanism {
     public LayerMask layerMaskObjects;
     Collider tileBaseCollider, tileTopCollider;
     GameObject target = null;
-    Transform targetParent = null;
+    public Transform targetParent = null;
 
     // Use this for initialization
     override protected void Start () {
@@ -52,5 +52,6 @@ public class Piston : Mechanism {
     private void DestroyParent()
     {
         target.transform.parent = targetParent;
+        targetParent = null;
     }
 }

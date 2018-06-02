@@ -8,8 +8,8 @@ public class GameManager : MonoBehaviour {
     public bool playersTurn, enemiesMoving, portalUsed;
 
     private float turnDelay = 1.1f;
-    private Vector3 orangePortalBegin, orangePortalEnd, orangePortalPos;
-    private Vector3 bluePortalBegin, bluePortalEnd, bluePortalPos;
+    public Vector3 orangePortalBegin, orangePortalEnd, orangePortalPos;
+    public Vector3 bluePortalBegin, bluePortalEnd, bluePortalPos;
     private List<Enemy> enemies;
     private Vector3 nullVector = new Vector3(-1, -1, -1);
     

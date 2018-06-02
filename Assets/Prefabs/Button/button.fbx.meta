@@ -1,29 +1,25 @@
 fileFormatVersion: 2
-guid: 5ecc36c0f60f56648b14e1f5b45baf3c
-timeCreated: 1527705575
+guid: 7319616a691ca584397e6fbe83ae37aa
+timeCreated: 1527938291
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Base
-    100002: //RootNode
-    100004: Center
-    400000: Base
-    400002: //RootNode
-    400004: Center
-    2100000: No Name
-    2300000: Base
-    2300002: Center
-    3300000: Base
-    3300002: Center
-    4300000: Center
-    4300002: Base
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: No Name
-    second: {fileID: 2100000, guid: 5a437353a2814c643bf963864d35bf52, type: 3}
+    100000: //RootNode
+    100002: Cylinder
+    100004: support2.0
+    400000: //RootNode
+    400002: Cylinder
+    400004: support2.0
+    2100000: Material.002
+    2100002: Material
+    2300000: Cylinder
+    2300002: support2.0
+    3300000: Cylinder
+    3300002: support2.0
+    4300000: support2.0
+    4300002: Cylinder
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -74,7 +70,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 40
+    normalSmoothAngle: 15
     normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
