@@ -6,7 +6,7 @@ public class FloorTile : MonoBehaviour {
 
     //public ParticleSystem orangePortal, bluePortal;
     public GameObject bluePortal, orangePortal, bluePortalBegin, orangePortalBegin;
-    public LayerMask layerMask, layerMaskNotPortal;
+    public LayerMask layerMask, layerMaskNotPortal, layerMaskPortal;
 
     private GameObject portal, beginPortal;
     private Outline outline;
@@ -30,12 +30,25 @@ public class FloorTile : MonoBehaviour {
 
         RaycastHit hit;
 
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), out hit, 4.0f, layerMaskNotPortal))
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), out hit, 2.0f, layerMaskNotPortal))
         {
             if (hit.collider != null)
                 return;
         }
 
+        if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), out hit, 2.0f, layerMaskPortal))
+        {
+            if (GameManager.instance.GetBluePortalPos() == transform.position)
+            {
+                GameManager.instance.SetBluePortalPos(new Vector3(-1, -1, -1));
+                GameManager.instance.SetBluePortal(new Vector3(-1, -1, -1));
+            }
+            if (GameManager.instance.GetOrangePortalPos() == transform.position)
+            {
+                GameManager.instance.SetOrangePortalPos(new Vector3(-1, -1, -1));
+                GameManager.instance.SetOrangePortal(new Vector3(-1, -1, -1));
+            }
+        }
 
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, Mathf.Infinity, layerMask))
         {
@@ -57,6 +70,7 @@ public class FloorTile : MonoBehaviour {
                             beginPortal = Instantiate(bluePortalBegin, gameObject.transform.position, gameObject.transform.localRotation);
                             portal = Instantiate(bluePortal, gameObject.transform.position, gameObject.transform.localRotation);
                             GameManager.instance.SetBluePortal(portal.transform.position);
+                            GameManager.instance.SetBluePortalPos(transform.position);
 
                             if (gameObject.transform.rotation.eulerAngles.z == 90)
                             {
@@ -75,7 +89,6 @@ public class FloorTile : MonoBehaviour {
                     {
                         Destroy(beginPortal);
                         Destroy(portal);
-                        GameManager.instance.SetBluePortal(new Vector3(-1,-1,-1));
                         bluePortalB = false;
                     }
                 }
@@ -98,6 +111,7 @@ public class FloorTile : MonoBehaviour {
                             beginPortal = Instantiate(orangePortalBegin, gameObject.transform.position, gameObject.transform.localRotation);
                             portal = Instantiate(orangePortal, gameObject.transform.position, gameObject.transform.localRotation);
                             GameManager.instance.SetOrangePortal(portal.transform.position);
+                            GameManager.instance.SetOrangePortalPos(transform.position);
 
                             if (gameObject.transform.rotation.eulerAngles.z == 90)
                             {
@@ -115,7 +129,6 @@ public class FloorTile : MonoBehaviour {
                     {
                         Destroy(beginPortal);
                         Destroy(portal);
-                        GameManager.instance.SetOrangePortal(new Vector3(-1,-1,-1));
                         orangePortalB = false;
                     }
                 }
