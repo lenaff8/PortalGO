@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 24aab4e49e05ed246aa0fe26cbcc5772
+timeCreated: 1527981181
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Cocogoose Narrow Trial
+  fontNames:
+  - Cocogoose Narrow Trial
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
