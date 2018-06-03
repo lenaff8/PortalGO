@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 124159408405953870}
   - component: {fileID: 81376679174844578}
   - component: {fileID: 114538479064743888}
+  - component: {fileID: 114972119081769736}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -188,6 +189,18 @@ MonoBehaviour:
   blurIterations: 5
   glowIntensityInner: 0.4
   samples: 2
+--- !u!114 &114972119081769736
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1850013063530308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: c6bc0a63f515cec49bb6770c72b9dcd1, type: 2}
 --- !u!124 &124159408405953870
 Behaviour:
   m_ObjectHideFlags: 1
