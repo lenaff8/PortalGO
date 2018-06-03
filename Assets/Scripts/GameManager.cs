@@ -5,16 +5,19 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
 
     public static GameManager instance = null;
-    public bool playersTurn, enemiesMoving, portalUsed;
-
+    public bool playersTurn, enemiesMoving, portalUsed, playing;
 
     private float turnDelay = 0.5f;
     private Vector3 orangePortalBegin, orangePortalEnd, orangePortalPos;
     private Vector3 bluePortalBegin, bluePortalEnd, bluePortalPos;
-
     private List<Enemy> enemies;
     private Vector3 nullVector = new Vector3(-1, -1, -1);
-    
+    private int levelsUnlocked;
+    private int numLvls = 3;
+    private int currentLvl;
+
+    private List<Vector2> collectables;         //x: Cube   y: Cake
+
     // Use this for initialization
     void Awake () {
 
@@ -23,22 +26,36 @@ public class GameManager : MonoBehaviour {
         else if (instance != this)
             Destroy(gameObject);
 
+        //DontDestroyOnLoad(gameObject);
+
+        collectables = new List<Vector2>();
+        for (int i = 0; i < numLvls; i++)
+            collectables.Add(Vector2.up);
+        enemies = new List<Enemy>();
+        levelsUnlocked = 0;
+        currentLvl = 0;
+        //InitGame(); // Eliminar
+    }
+
+    public void InitGame()
+    {
         orangePortalBegin = nullVector;
         orangePortalEnd = nullVector;
         bluePortalBegin = nullVector;
         bluePortalEnd = nullVector;
 
-        
+        enemies.Clear();
+
         playersTurn = false;
         portalUsed = false;
-        enemiesMoving = true;
+        enemiesMoving = false;
+        playing = false;
         Invoke("PlayerTurn", 2);
-        enemies = new List<Enemy>();
     }
-	
+
 	// Update is called once per frame
 	void Update () {
-        if (playersTurn || enemiesMoving)
+        if (playersTurn || enemiesMoving || !playing)
             return;
 
         StartCoroutine(MoveEnemies());
@@ -87,9 +104,39 @@ public class GameManager : MonoBehaviour {
         enemiesMoving = false;
     }
 
-    private void SetPlayersTurn()
+    public void SetCurrentLvl(int lvl)
     {
-        playersTurn = true;
+        currentLvl = lvl;
+    }
+
+    public int GetCurrentLvl()
+    {
+        return currentLvl;
+    }
+    
+
+    public void SetCubeCollected()
+    {
+        collectables[currentLvl] = new Vector2(1, collectables[currentLvl].y);
+    }
+
+    public void SetCakeCollected()
+    {
+        collectables[currentLvl] = new Vector2(collectables[currentLvl].x, 1);
+    }
+
+    public bool CubeCollected()
+    {
+        if (collectables[currentLvl].x == 1)
+            return true;
+        return false;
+    }
+
+    public bool CakeCollected()
+    {
+        if (collectables[currentLvl].y == 1)
+            return true;
+        return false;
     }
 
     public Vector3 GetOrangePortalPos()
