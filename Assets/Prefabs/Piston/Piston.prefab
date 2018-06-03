@@ -72,6 +72,7 @@ GameObject:
   - component: {fileID: 4014381371306278}
   - component: {fileID: 33242558064399728}
   - component: {fileID: 23578139716186818}
+  - component: {fileID: 136955774991384312}
   m_Layer: 13
   m_Name: Piston
   m_TagString: Untagged
@@ -129,7 +130,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1247120686195444}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 35, y: 0, z: -15}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children:
   - {fileID: 4029557777398948}
@@ -338,7 +339,7 @@ Animator:
   m_GameObject: {fileID: 1247120686195444}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4747d738be49aed40ab4b72e6a11e58f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6b7101d465f2d0c4e97f9e4f6b8ed343, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -363,3 +364,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294963935
   targetParent: {fileID: 0}
+--- !u!136 &136955774991384312
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1865554961252106}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.011981
+  m_Height: 1.9782438
+  m_Direction: 2
+  m_Center: {x: -3.4735668e-24, y: -0.019766016, z: -0.03692667}
