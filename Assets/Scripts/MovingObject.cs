@@ -83,10 +83,10 @@ public abstract class MovingObject : MonoBehaviour {
                 // animacion hacia abajo
 
                 Vector3 newPos = GameManager.instance.GetOrangePortalEnd();
-                newPos += new Vector3(0, transform.position.y - newPos.y, 0);
+                newPos += new Vector3(0, -2.5f, 0);
                 transform.position = newPos;
                 newPos = GameManager.instance.GetOrangePortalBegin();
-                newPos += new Vector3(0, transform.position.y - newPos.y, 0);
+                newPos += new Vector3(0, -2.5f, 0);
                 StartCoroutine(SmoothMovement(newPos, target));
                 return true;
 
@@ -104,10 +104,10 @@ public abstract class MovingObject : MonoBehaviour {
                 // animacion hacia abajo
 
                 Vector3 newPos = GameManager.instance.GetBluePortalEnd();
-                newPos += new Vector3(0, transform.position.y - newPos.y, 0);
+                newPos += new Vector3(0,-2.5f, 0);
                 transform.position = newPos;
                 newPos = GameManager.instance.GetBluePortalBegin();
-                newPos += new Vector3(0, transform.position.y - newPos.y, 0);
+                newPos += new Vector3(0, -2.5f, 0);
                 StartCoroutine(SmoothMovement(newPos, target));
                 return true;
 
