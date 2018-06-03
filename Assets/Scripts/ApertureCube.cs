@@ -41,7 +41,6 @@ public class ApertureCube : Cube {
                         //can drop cube there
                         picked = false;
                         finalPosition = gameObject.transform.position + 5 * dir + new Vector3(0f, -2.4f, 0f);
-                        Debug.Log("Starting drop");
                         StartCoroutine(MoveToFinalPosition(parent));
                         GameManager.instance.playersTurn = false;
                     }
@@ -54,7 +53,6 @@ public class ApertureCube : Cube {
     // this object was clicked and it's pickable - do something
     override protected void PickUp()
     {
-        Debug.Log("Picking Up Cube");
         //We do not want sudden movements
         finalPosition = gameObject.transform.position + playerDirection * 5f + new Vector3(0f, 2.4f, 0f);
         StartCoroutine(MoveToFinalPosition(player.transform));
@@ -63,7 +61,6 @@ public class ApertureCube : Cube {
 
     protected override void PutDown()
     {
-        Debug.Log("Selected Cube for drop");
         player.SendMessage("SetDroppingCube", true);
         dropping = true;
     }
@@ -80,10 +77,9 @@ public class ApertureCube : Cube {
             gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, finalPosition, step);
 
             sqrRemainingDistance = (gameObject.transform.position - finalPosition).sqrMagnitude;
-            Debug.Log("Remaining " + sqrRemainingDistance);
+
             yield return null;
         }
-        Debug.Log("Trespassing cube");
         gameObject.transform.parent = targetParent;
 
     }
