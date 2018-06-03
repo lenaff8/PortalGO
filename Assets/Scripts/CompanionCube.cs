@@ -23,5 +23,6 @@ public class CompanionCube : Cube
     override protected void PickUp()
     {
         Debug.Log("Clicked Companion Cube");
+        gameObject.SetActive(false);
     }
 }
