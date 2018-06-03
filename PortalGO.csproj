@@ -352,6 +352,7 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\LaserEmitter.cs" />
     <Compile Include="Assets\Scripts\LaserReciever.cs" />
+    <Compile Include="Assets\Scripts\LvlSelectDoor.cs" />
     <Compile Include="Assets\Scripts\Mechanism.cs" />
     <Compile Include="Assets\Scripts\Mimic.cs" />
     <Compile Include="Assets\Scripts\MovingObject.cs" />
