@@ -21,7 +21,7 @@ public class MainMenu : MonoBehaviour {
         {
             if (Input.GetKey(KeyCode.Escape))
             {
-                cam.GetComponent<Animator>().Play("toMenu2");
+                cam.GetComponent<Animator>().Play("toMenu");
                 totalMenu.gameObject.SetActive(true);
                 totalMenu.GetComponent<Animator>().Play("toMenuCanvas");
                 mainMenu.GetComponent<CanvasGroup>().interactable = true;

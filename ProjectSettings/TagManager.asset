@@ -9,6 +9,11 @@ TagManager:
   - BluePortal
   - LaserReciever
   - Tile
+  - To1
+  - To2
+  - To3
+  - To4
+  - To0
   layers:
   - Default
   - TransparentFX
@@ -25,7 +30,7 @@ TagManager:
   - Enemy
   - Object
   - PickUp
-  - Invisible
+  - 
   - 
   - 
   - 

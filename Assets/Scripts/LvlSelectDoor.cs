@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class LvlSelectDoor : Door {
-
 
     // Use this for initialization
     override protected void Start()
@@ -24,7 +22,6 @@ public class LvlSelectDoor : Door {
     void OnTriggerExit(Collider other)
     {
         SetState("Deactivate");
-        
     }
 
     override protected void OnSetState(string state) {
@@ -37,6 +34,4 @@ public class LvlSelectDoor : Door {
             compColliderBehind.enabled = false;
         }
     }
-
-    
 }
