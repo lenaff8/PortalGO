@@ -8,13 +8,13 @@ public class Cube : MonoBehaviour {
     protected Outline outline;
     public LayerMask playerMask, objectLayer;
     // Use this for initialization
-    void Start () {
+    virtual protected void Start () {
         outline = gameObject.GetComponent<Outline>();
         pickable = false;
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	virtual protected void Update () {
         if (!GameManager.instance.playersTurn)
         {
             outline.enabled = false;
@@ -44,11 +44,17 @@ public class Cube : MonoBehaviour {
                 else
                     outline.enabled = false;
             }
+            if (pickable && outline.enabled && Input.GetMouseButtonDown(0)) PickUp();
         }
     }
 
     public bool IsPickable()
     {
         return pickable;
+    }
+
+    virtual protected void PickUp()
+    {
+
     }
 }

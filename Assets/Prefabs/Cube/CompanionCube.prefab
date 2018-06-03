@@ -22,7 +22,8 @@ GameObject:
   - component: {fileID: 114504685324151264}
   - component: {fileID: 54157176893674272}
   - component: {fileID: 65955240880699868}
-  m_Layer: 0
+  - component: {fileID: 114863512077647060}
+  m_Layer: 13
   m_Name: CompanionCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +40,7 @@ GameObject:
   - component: {fileID: 4018016545481484}
   - component: {fileID: 33051460249152540}
   - component: {fileID: 23027909269678692}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: g_cube_low_cube_low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +57,7 @@ GameObject:
   - component: {fileID: 4379272740241246}
   - component: {fileID: 33409402042064732}
   - component: {fileID: 23337624583095108}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: g_c_low_c_low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +74,7 @@ GameObject:
   - component: {fileID: 4674659302216712}
   - component: {fileID: 33459605753624262}
   - component: {fileID: 23697648141973554}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: g_p_low_p_low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +91,7 @@ GameObject:
   - component: {fileID: 4959807519775444}
   - component: {fileID: 33149376665756696}
   - component: {fileID: 23311551941070388}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: g_g_low_g_low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +118,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1031035103976234}
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: 5, y: 2.1, z: 0}
+  m_LocalPosition: {x: 10, y: 2.1, z: 20}
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children:
   - {fileID: 4379272740241246}
@@ -371,3 +372,20 @@ MonoBehaviour:
   outlineMode: 0
   outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 2
+--- !u!114 &114863512077647060
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1031035103976234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 653c5a4fe58719c41964b068dbd7bc66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  objectLayer:
+    serializedVersion: 2
+    m_Bits: 30481

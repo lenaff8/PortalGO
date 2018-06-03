@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 114104687572360184}
   - component: {fileID: 54935366153477928}
   - component: {fileID: 65370333269360206}
-  - component: {fileID: 114901480103464230}
+  - component: {fileID: 114303543943820326}
   m_Layer: 13
   m_Name: ApertureCube
   m_TagString: Untagged
@@ -105,7 +105,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1789475656091806}
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 1.95, z: 0}
+  m_LocalPosition: {x: 0, y: 2.63, z: 0}
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children:
   - {fileID: 4480996978436492}
@@ -372,7 +372,7 @@ MonoBehaviour:
   outlineMode: 0
   outlineColor: {r: 0, g: 1, b: 0.95862055, a: 0.516}
   outlineWidth: 2
---- !u!114 &114901480103464230
+--- !u!114 &114303543943820326
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -380,6 +380,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1789475656091806}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cabb6517b50740940a4c62aa13068701, type: 3}
+  m_Script: {fileID: 11500000, guid: af6e42add0353fc4d8bc02118a4962fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  objectLayer:
+    serializedVersion: 2
+    m_Bits: 30481
