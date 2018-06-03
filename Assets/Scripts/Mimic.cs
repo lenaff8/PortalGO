@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Mimic : Enemy {
 
-    public int tilesToActivate;
+    private int tilesToActivate = 2;
 
 	// Use this for initialization
 	protected override void Start () {
@@ -17,10 +17,10 @@ public class Mimic : Enemy {
         if (!attackMode) {
             int tilesX = (int)(transform.position.x - target.transform.position.x) / 5;
             int tilesZ = (int)(transform.position.z - target.transform.position.z) / 5;
-            if ((tilesX + tilesZ) > tilesToActivate)
+            if ((Mathf.Abs(tilesX) + Mathf.Abs(tilesZ)) < tilesToActivate)
             {
                 Animator animator = GetComponent<Animator>();
-                animator.SetTrigger("Activate");
+                animator.SetTrigger("showMimic");
                 attackMode = true;
             }
         }

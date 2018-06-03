@@ -17,8 +17,14 @@ public class Turret : MonoBehaviour {
         RaycastHit hit;
         if (Physics.Raycast(transform.position + new Vector3(0,2,0), transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, layerMask))
         {
+            hit.collider.gameObject.GetComponent<Player>().Die(true);
             //player ded
         }
  
+    }
+
+    public void Die()
+    {
+        // Animacion
     }
 }

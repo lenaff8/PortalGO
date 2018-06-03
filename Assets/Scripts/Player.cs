@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MovingObject {
 
-    private bool pt;
+    private int nextlvl;
     private bool droppingCube;
     //private Animator animator;
     // Use this for initialization
@@ -16,7 +16,7 @@ public class Player : MovingObject {
 	// Update is called once per frame
 	private void Update () {
 
-        if (!GameManager.instance.playersTurn) return;
+        if (!GameManager.instance.playersTurn || GameManager.instance.setup) return;
 
         if (!droppingCube)
         {
@@ -39,9 +39,66 @@ public class Player : MovingObject {
         
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("To0"))
+        {
+            GameManager.instance.playersTurn = false;
+            nextlvl = 0;
+            Invoke("ChangeScene", 0.5f);
+        }
+        if (other.CompareTag("To1"))
+        {
+            GameManager.instance.playersTurn = false;
+            nextlvl = 1;
+            Invoke("ChangeScene", 0.5f);
+        }
+        if (other.CompareTag("To2"))
+        {
+            GameManager.instance.playersTurn = false;
+            nextlvl = 2;
+            Invoke("ChangeScene", 0.5f);
+        }
+        if (other.CompareTag("To3"))
+        {
+            GameManager.instance.playersTurn = false;
+            nextlvl = 3;
+            Invoke("ChangeScene", 0.5f);
+        }
+        if (other.CompareTag("To4"))
+        {
+            GameManager.instance.playersTurn = false;
+            nextlvl = 4;
+            Invoke("ChangeScene", 0.5f);
+        }
+    }
+
+    public void Die(bool turret)            // True si muere por torreta, false si muere por frankenturret
+    {
+        /*if (turret)
+            animator.SetTrigger("DieFromTurret");
+        else
+            animator.SetTrigger("DieFromFrankenturret");*/
+        GameManager.instance.playing = false;
+        Invoke("PlayerIsDead", 4);
+    }
+
+    public void NotWalking()
+    {
+    }
+
+    private void PlayerIsDead()
+    {
+        GameManager.instance.ReloadScene();
+    }
+
     public void SetDroppingCube(bool value)
     {
         droppingCube = value;
     }
- 
+
+    private void ChangeScene()
+    {
+        GameManager.instance.ChangeScene(nextlvl);
+    }
 }

@@ -5,10 +5,10 @@ using UnityEngine;
 public abstract class MovingObject : MonoBehaviour {
 
     public LayerMask layerMaskPortal, layerMaskCollider, layerMaskTarget, layerMaskObject;
-    public float speed;
+    public float speed; 
 
     private GameObject bait;
-    private Animator animator;
+    protected Animator animator;
     // Use this for initialization
     protected virtual void Start () {
         
@@ -45,7 +45,16 @@ public abstract class MovingObject : MonoBehaviour {
         if (Physics.Raycast(start, direction, out hit, 5.0f, layerMaskTarget))
         {
             if (hit.collider != null)
+            {
                 target = true;
+
+                if (hit.collider.CompareTag("Player"))
+                    hit.collider.gameObject.GetComponent<Player>().Die(false);
+                else if (hit.collider.CompareTag("Turret"))
+                    hit.collider.gameObject.GetComponent<Turret>().Die();
+                else if (hit.collider.CompareTag("Frankenturret"))
+                    hit.collider.gameObject.GetComponent<Frankenturret>().Die();
+            }
         }
         if (Physics.Raycast(start, direction, out hit, 5.0f, layerMaskPortal))
         {
@@ -151,6 +160,7 @@ public abstract class MovingObject : MonoBehaviour {
         float sqrRemainingDistance;
         if (attack)
         {
+
             Vector3 halfEnd = end;
             if (transform.position.x < end.x)
                 halfEnd.x -= 1.5f;

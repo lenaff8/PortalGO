@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
     public static GameManager instance = null;
-    public bool playersTurn, enemiesMoving, portalUsed, playing;
+    public bool playersTurn, enemiesMoving, portalUsed, playing, setup;
+    //public GameObject fade;
 
     private float turnDelay = 0.5f;
     private Vector3 orangePortalBegin, orangePortalEnd, orangePortalPos;
@@ -26,7 +28,7 @@ public class GameManager : MonoBehaviour {
         else if (instance != this)
             Destroy(gameObject);
 
-        //DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);
 
         collectables = new List<Vector2>();
         for (int i = 0; i < numLvls; i++)
@@ -34,6 +36,9 @@ public class GameManager : MonoBehaviour {
         enemies = new List<Enemy>();
         levelsUnlocked = 0;
         currentLvl = 0;
+        playing = false;
+        playersTurn = false;
+        enemiesMoving = false;
         //InitGame(); // Eliminar
     }
 
@@ -49,13 +54,15 @@ public class GameManager : MonoBehaviour {
         playersTurn = false;
         portalUsed = false;
         enemiesMoving = false;
-        playing = false;
-        Invoke("PlayerTurn", 2);
+        playing = true;
+        setup = true;
+        Invoke("NotSetup", 1);
+        Invoke("PlayerTurn", 1);
     }
 
 	// Update is called once per frame
 	void Update () {
-        if (playersTurn || enemiesMoving || !playing)
+        if (playersTurn || enemiesMoving || !playing || setup)
             return;
 
         StartCoroutine(MoveEnemies());
@@ -95,13 +102,21 @@ public class GameManager : MonoBehaviour {
             }
                 
         }
-        Invoke("PlayerTurn",0.3f);
+        Invoke("PlayerTurn",0.4f);
     }
 
     private void PlayerTurn()
     {
-        playersTurn = true;
-        enemiesMoving = false;
+        if (playing)
+        {
+            playersTurn = true;
+            enemiesMoving = false;
+        }
+    }
+
+    private void NotSetup()
+    {
+        setup = false;
     }
 
     public void SetCurrentLvl(int lvl)
@@ -229,4 +244,26 @@ public class GameManager : MonoBehaviour {
             bluePortalEnd = portal;
         }
     }
+
+    public void ChangeScene(int scene)
+    {
+
+        //fade.GetComponent<Animator>().SetTrigger("FadeOut");
+
+        InitGame();
+        currentLvl = scene;
+        SceneManager.LoadScene(scene);
+
+    }
+
+    public void ReloadScene()
+    {
+
+        //fade.GetComponent<Animator>().SetTrigger("FadeOut");
+        InitGame();
+
+        SceneManager.LoadScene(currentLvl);
+
+    }
+
 }

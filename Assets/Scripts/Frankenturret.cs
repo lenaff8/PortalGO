@@ -30,4 +30,10 @@ public class Frankenturret : Enemy {
         }
     }
 
+    public void Die()
+    {
+        // Animacion
+        
+    }
+
 }

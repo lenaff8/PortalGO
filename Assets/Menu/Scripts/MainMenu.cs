@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour {
 
-    private Camera cam;
+    public Camera cam;
     public Canvas totalMenu;
     public GameObject mainMenu, controlsMenu, creditsMenu, exitMenu;
     private bool inMenu;
 
     private void Start()
     {
-        cam = Camera.main;
+        //cam = Camera.main;
         inMenu = true;
     }
 
@@ -21,7 +21,7 @@ public class MainMenu : MonoBehaviour {
         {
             if (Input.GetKey(KeyCode.Escape))
             {
-                cam.GetComponent<Animator>().Play("toMenu");
+                cam.GetComponent<Animator>().Play("toMenu2");
                 totalMenu.gameObject.SetActive(true);
                 totalMenu.GetComponent<Animator>().Play("toMenuCanvas");
                 mainMenu.GetComponent<CanvasGroup>().interactable = true;
