@@ -104,6 +104,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4190910613997468}
+  - component: {fileID: 114729397065944002}
   m_Layer: 0
   m_Name: Frankenturret_Companion
   m_TagString: Untagged
@@ -1047,3 +1048,30 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1715210976869836}
   m_Mesh: {fileID: 4300020, guid: 5efadfd5adecb8e45af0e2159ed1986d, type: 3}
+--- !u!114 &114729397065944002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1542194428346640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d71b7d2983ba57e4eb0a3559572eddd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerMaskPortal:
+    serializedVersion: 2
+    m_Bits: 256
+  layerMaskCollider:
+    serializedVersion: 2
+    m_Bits: 2048
+  layerMaskTarget:
+    serializedVersion: 2
+    m_Bits: 512
+  layerMaskObject:
+    serializedVersion: 2
+    m_Bits: 8192
+  speed: 10
+  moveTime: 0.1
+  target: {fileID: 0}
+  tilesToActivate: 5
