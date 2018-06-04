@@ -9,6 +9,11 @@ TagManager:
   - BluePortal
   - LaserReciever
   - Tile
+  - To4
+  - To2
+  - To1
+  - To3
+  - To0
   layers:
   - Default
   - TransparentFX
