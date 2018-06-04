@@ -16,7 +16,7 @@ public class Player : MovingObject {
 	// Update is called once per frame
 	private void Update () {
 
-        if (!GameManager.instance.playersTurn || GameManager.instance.setup) return;
+        if (!GameManager.instance.playersTurn || GameManager.instance.setup || !GameManager.instance.playing) return;
 
         if (!droppingCube)
         {

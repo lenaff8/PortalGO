@@ -22,7 +22,7 @@ public class FloorTile : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (!GameManager.instance.playersTurn)
+        if (!GameManager.instance.playersTurn || GameManager.instance.setup || !GameManager.instance.playing) 
         {
             outline.enabled = false;
             return;

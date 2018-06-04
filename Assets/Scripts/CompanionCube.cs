@@ -10,6 +10,8 @@ public class CompanionCube : Cube
     override protected void Start()
     {
         base.Start();
+        /*if (GameManager.instance.CubeCollected())
+            Destroy(gameObject);*/
     }
 
     // Update is called once per frame
@@ -24,5 +26,6 @@ public class CompanionCube : Cube
     {
         Debug.Log("Clicked Companion Cube");
         gameObject.SetActive(false);
+        GameManager.instance.SetCubeCollected();
     }
 }

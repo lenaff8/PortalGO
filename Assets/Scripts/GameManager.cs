@@ -32,13 +32,14 @@ public class GameManager : MonoBehaviour {
 
         collectables = new List<Vector2>();
         for (int i = 0; i < numLvls; i++)
-            collectables.Add(Vector2.up);
+            collectables.Add(Vector2.zero);
         enemies = new List<Enemy>();
         levelsUnlocked = 0;
         currentLvl = 0;
         playing = false;
         playersTurn = false;
         enemiesMoving = false;
+        setup = false;
         //InitGame(); // Eliminar
     }
 
@@ -266,4 +267,12 @@ public class GameManager : MonoBehaviour {
 
     }
 
+    public void OnMenu(bool menuActive)
+    {
+        if (menuActive)
+            setup = true;
+        else
+            setup = false;
+        Debug.Log(setup);
+    }
 }
