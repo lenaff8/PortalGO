@@ -12,7 +12,6 @@ public class Enemy : MovingObject
     // Use this for initialization
     protected override void Start () {
         GameManager.instance.AddEnemyToList(this);
-        base.Start();
         attackMode = false;
     }
 	
@@ -43,6 +42,7 @@ public class Enemy : MovingObject
         if (xDir != 0)
             if (Move(transform.position.x + xDir, transform.position.z))
                 return;
+
 
         Move(transform.position.x, transform.position.z + yDir);
 

@@ -54,3 +54,8 @@ MonoBehaviour:
   playersTurn: 0
   enemiesMoving: 0
   portalUsed: 0
+  playing: 0
+  setup: 0
+  cake1: {fileID: 1222334656077604, guid: c1136a8faf452414db4b6787c7f8b772, type: 2}
+  cake2: {fileID: 1876915301754830, guid: ccaf2a5074c6f0846a07b6e5499dd42c, type: 2}
+  cake3: {fileID: 1058702677799554, guid: 2b4e1d94d5cd6f04e87a6cf0a09b50aa, type: 2}

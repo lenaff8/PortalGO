@@ -8,20 +8,24 @@ public class Mimic : Enemy {
 
 	// Use this for initialization
 	protected override void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        base.Start();
+
+    }
+
+    // Update is called once per frame
+    void Update () {
 
         if (!attackMode) {
-            int tilesX = (int)(transform.position.x - target.transform.position.x) / 5;
-            int tilesZ = (int)(transform.position.z - target.transform.position.z) / 5;
-            if ((Mathf.Abs(tilesX) + Mathf.Abs(tilesZ)) < tilesToActivate)
+            if ((int)(transform.position.y - target.transform.position.y) / 5 == 0)
             {
-                Animator animator = GetComponent<Animator>();
-                animator.SetTrigger("showMimic");
-                attackMode = true;
+                int tilesX = (int)(transform.position.x - target.transform.position.x) / 5;
+                int tilesZ = (int)(transform.position.z - target.transform.position.z) / 5;
+                if ((Mathf.Abs(tilesX) + Mathf.Abs(tilesZ)) < tilesToActivate)
+                {
+                    Animator animator = GetComponent<Animator>();
+                    animator.SetTrigger("showMimic");
+                    attackMode = true;
+                }
             }
         }
     }

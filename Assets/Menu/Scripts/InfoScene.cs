@@ -19,12 +19,20 @@ public class InfoScene : MonoBehaviour {
 
     }
 
-    public void CubeCollected()
+    private void Update()
+    {
+        if (GameManager.instance.CubeCollected())
+            cube.sprite = cubeSprite;
+        if (GameManager.instance.CakeCollected())
+            cake.sprite = cakeSprite;
+    }
+
+    private void CubeCollected()
     {
         cube.sprite = cubeSprite;
     }
 
-    public void CakeCollected()
+    private void CakeCollected()
     {
         cake.sprite = cakeSprite;
     }

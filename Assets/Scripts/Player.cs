@@ -71,6 +71,11 @@ public class Player : MovingObject {
             nextlvl = 4;
             Invoke("ChangeScene", 0.5f);
         }
+        if (other.CompareTag("cake"))
+        {
+            other.gameObject.SetActive(false);
+            GameManager.instance.SetCakeCollected();
+        }
     }
 
     public void Die(bool turret)            // True si muere por torreta, false si muere por frankenturret

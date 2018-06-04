@@ -31,6 +31,12 @@ public class MainMenu : MonoBehaviour {
         }
     }
 
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
     public void ToScene()
     {
         Invoke("SetInMenuFalse",1);

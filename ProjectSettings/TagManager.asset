@@ -14,6 +14,7 @@ TagManager:
   - To3
   - To4
   - To0
+  - cake
   layers:
   - Default
   - TransparentFX

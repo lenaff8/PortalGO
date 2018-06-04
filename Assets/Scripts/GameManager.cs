@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager instance = null;
     public bool playersTurn, enemiesMoving, portalUsed, playing, setup;
-    //public GameObject fade;
+    public GameObject cake1, cake2, cake3;
 
     private float turnDelay = 0.5f;
     private Vector3 orangePortalBegin, orangePortalEnd, orangePortalPos;
@@ -15,8 +15,10 @@ public class GameManager : MonoBehaviour {
     private List<Enemy> enemies;
     private Vector3 nullVector = new Vector3(-1, -1, -1);
     private int levelsUnlocked;
+    private int cake;
     private int numLvls = 3;
     private int currentLvl;
+    private GameObject cakeObj;
 
     private List<Vector2> collectables;         //x: Cube   y: Cake
 
@@ -40,6 +42,7 @@ public class GameManager : MonoBehaviour {
         playersTurn = false;
         enemiesMoving = false;
         setup = false;
+        cake = 0;
         //InitGame(); // Eliminar
     }
 
@@ -65,7 +68,6 @@ public class GameManager : MonoBehaviour {
 	void Update () {
         if (playersTurn || enemiesMoving || !playing || setup)
             return;
-
         StartCoroutine(MoveEnemies());
     }
 
@@ -133,24 +135,43 @@ public class GameManager : MonoBehaviour {
 
     public void SetCubeCollected()
     {
-        collectables[currentLvl] = new Vector2(1, collectables[currentLvl].y);
+        collectables[currentLvl-1] = new Vector2(1, collectables[currentLvl-1].y);
     }
 
     public void SetCakeCollected()
     {
-        collectables[currentLvl] = new Vector2(collectables[currentLvl].x, 1);
+        if (collectables[currentLvl].y == 0)
+        {
+            Debug.Log("CAKE");
+            collectables[currentLvl-1] = new Vector2(collectables[currentLvl-1].x, 1);
+            ++cake;
+            if (cake == 1)
+                cakeObj = Instantiate(cake1);
+            if (cake == 2)
+                cakeObj = Instantiate(cake2);
+            if (cake == 3)
+                cakeObj = Instantiate(cake3);
+            Invoke("InactiveCake", 1.5f);
+        }
     }
+
+    private void InactiveCake()
+    {
+        Destroy(cakeObj);
+
+    }
+
 
     public bool CubeCollected()
     {
-        if (collectables[currentLvl].x == 1)
+        if (collectables[currentLvl-1].x == 1)
             return true;
         return false;
     }
 
     public bool CakeCollected()
     {
-        if (collectables[currentLvl].y == 1)
+        if (collectables[currentLvl-1].y == 1)
             return true;
         return false;
     }
